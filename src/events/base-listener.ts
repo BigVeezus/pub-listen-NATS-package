@@ -27,7 +27,7 @@ export abstract class Listener<T extends Event> {
   }
 
   listen() {
-    const subscription = this.client.subscribe(
+    const subscription: any = this.client.subscribe(
       this.subject,
       this.queueGroupName,
       this.subscriptionOptions()
